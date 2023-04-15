@@ -1,3 +1,4 @@
+# Comment test for re-add
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -5,7 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Enable Stock auto completion
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 autoload -U compinit; compinit
 
 
@@ -17,109 +20,24 @@ autoload -U compinit; compinit
 # HYPHEN_INSENSITIVE="true"
 
 #Current Promp Theme
-eval "$(starship init zsh)"
-
-#color man pages
-
-export LESS=-R         
-export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
-export LESS_TERMCAP_md=$'\E[01;35m' # begin bold    
-export LESS_TERMCAP_me=$'\E[0m' # end mode          
-export LESS_TERMCAP_se=$'\E[0m' # end standout-mode
-export LESS_TERMCAP_so=$'\E[01;44;37m' # begin standout-mode
-export LESS_TERMCAP_ue=$'\E[0m' # end underline
-export LESS_TERMCAP_us=$'\E[01;36m' # begin underline
-export LESSOPEN='| /usr/bin/highlight -O ansi %s 2>/dev/null'
-        
-
-#ZSH SYNTAX HIGHLIGHTIING
-
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor)
-typeset -gA ZSH_HIGHLIGHT_STYLES
-
-### Diffs
-### Markup
-## Classes
-## Comments
-ZSH_HIGHLIGHT_STYLES[comment]='fg=#6272A4'
-## Constants
-## Entitites
-## Functions/methods
-ZSH_HIGHLIGHT_STYLES[alias]='fg=#50FA7B'
-ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#50FA7B'
-ZSH_HIGHLIGHT_STYLES[global-alias]='fg=#50FA7B'
-ZSH_HIGHLIGHT_STYLES[function]='fg=#50FA7B'
-ZSH_HIGHLIGHT_STYLES[command]='fg=#bd93f9'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=#50FA7B,italic'
-ZSH_HIGHLIGHT_STYLES[autodirectory]='fg=#FFB86C,italic'
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=#FFB86C'
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#FFB86C'
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=#BD93F9'
-## Keywords
-## Built ins
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=#8BE9FD'
-ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#8BE9FD'
-ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=#8BE9FD'
-## Punctuation
-ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#FF79C6'
-ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter-unquoted]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]='fg=#FF79C6'
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=#FF79C6'
-ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]='fg=#FF79C6'
-## Serializable / Configuration Languages
-## Storage
-## Strings
-ZSH_HIGHLIGHT_STYLES[command-substitution-quoted]='fg=#F1FA8C'
-ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter-quoted]='fg=#F1FA8C'
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#F1FA8C'
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument-unclosed]='fg=#FF5555'
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#F1FA8C'
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument-unclosed]='fg=#FF5555'
-ZSH_HIGHLIGHT_STYLES[rc-quote]='fg=#F1FA8C'
-## Variables
-ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument-unclosed]='fg=#FF5555'
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[assign]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[named-fd]='fg=#ffb86c'
-ZSH_HIGHLIGHT_STYLES[numeric-fd]='fg=#F8F8F2'
-## No category relevant in spec
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#FF5555'
-#testng path here
-ZSH_HIGHLIGHT_STYLES[path]='fg=#bd93f9'
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#FF79C6'
-ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='fg=#FF79C6'
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=#BD93F9'
-#ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=?'
-#ZSH_HIGHLIGHT_STYLES[command-substitution-unquoted]='fg=?'
-#ZSH_HIGHLIGHT_STYLES[process-substitution]='fg=?'
-#ZSH_HIGHLIGHT_STYLES[arithmetic-expansion]='fg=?'
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument-unclosed]='fg=#FF5555'
-ZSH_HIGHLIGHT_STYLES[redirection]='fg=#F8F8F2'
-#argument variable???
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[default]='fg=#F8F8F2'
-ZSH_HIGHLIGHT_STYLES[cursor]='standout'
-
+#eval "$(starship init zsh)"
+#p10k 
+source ~/.config/zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme
+#colored man pages
+source ~/.config/zsh-plugins/colored-man.zsh 
+## Source Highlighting 
+source ~/.config/zsh-plugins/highlighting.zsh
 
 #deno
 
 export DENO_INSTALL="/home/shonuff/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-export SCOUT_TOKEN='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'
 
-plugins=(git zsh-nvm zsh-autosuggestions zsh-syntax-highlighting)
+## fnm
 
-
-
-export NVM_DIR="/home/shonuff/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=/home/shonuff/.fnm:$PATH 
+eval "$(fnm env --use-on-cd)"
 
 #Load Pythong Enviroment
 python_venv() {
@@ -132,33 +50,13 @@ python_venv() {
 autoload -U add-zsh-hook
 add-zsh-hook chpwd python_venv
 
-#load NVM enviroment
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-# Activate node enviroment
-load-nvmrc
 # Activate python enviroment
 python_venv
 
 ### START ALIAS SECTION 
 
+# Alias for NVIM 
+alias n="nvim"
 # Alias for luamake
 alias luamake=/luamake
 
@@ -180,17 +78,30 @@ alias top="bpytop"
 alias repl="ipython"
 # Change pnpm to a shorter command 
 alias pn="pnpm"
-
+# Perform EASY update 
+alias update="sudo apt update"
+# Perform EASY upgrade 
+alias upgrade="sudo apt upgrade"
+# Load cheat sheets
+alias cheat="cht.sh --shell"
+# Jump to School Folder 
+# ########################################## #
+# Directory Aliases
+alias school="cd ~/Documents/School/"
 ### END ALIAS SECTIONS
-
 # source zsh auto suggestions 
 source ~/.config/zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source Zsh Syntax Highlighting
 source ~/.config/zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
+# FZF commands 
+ source /usr/share/doc/fzf/examples/key-bindings.zsh
+ source /usr/share/doc/fzf/examples/completion.zsh
 # Insitate a history file 
 HISTFILE=~/.zsh_history 
 HISTSIZE=1000
 SAVEHIST=1000 
 setopt appendhistory
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
