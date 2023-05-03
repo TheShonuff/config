@@ -9,4 +9,4 @@
   url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "~/.config/nvim"]
   path = .confg/nvim
-  url = https://github.com/NVIM.git
+  url = https://github.com/TheShonuff/NVIM.git
